@@ -10,6 +10,8 @@ tannakiansymbol.o: src/main/tannakiansymbol.cpp src/main/tannakiansymbol.h
 testing.o: src/test/lib/testing.cpp src/test/lib/testing.h
 	$(CXX) $(CXXFLAGS) -c src/test/lib/testing.cpp -o bin/testing.o
 
+test: all testing.o tannakiansymbol.o
+	$(CXX) $(CXXFLAGS) -o bin/test -I./src/main -I./src/test/lib src/test/test.cpp
 
 clean:
 	$(RM) bin/*
