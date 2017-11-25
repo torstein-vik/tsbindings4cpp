@@ -11,7 +11,7 @@ testing.o: src/test/lib/testing.cpp src/test/lib/testing.h
 	$(CXX) $(CXXFLAGS) -c src/test/lib/testing.cpp -o bin/testing.o
 
 test: all testing.o tannakiansymbol.o
-	$(CXX) $(CXXFLAGS) -o bin/test -I./src/main -I./src/test/lib src/test/test.cpp
+	$(CXX) $(CXXFLAGS) -o bin/test bin/tannakiansymbol.o bin/testing.o -I./src/main -I./src/test/lib src/test/test.cpp
 
 clean:
 	$(RM) bin/*
