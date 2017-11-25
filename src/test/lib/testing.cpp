@@ -30,4 +30,7 @@ int testsfinished()
 
 void assert(bool assertion, string msg)
 {
+    if(!assertion) {
+        TestState.passing = false;
+    }
 }
