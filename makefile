@@ -13,5 +13,8 @@ testing.o: src/test/lib/testing.cpp src/test/lib/testing.h
 compiletest: all testing.o tannakiansymbol.o
 	$(CXX) $(CXXFLAGS) -o bin/test bin/tannakiansymbol.o bin/testing.o -I./src/main -I./src/test/lib src/test/test.cpp
 
+test: compiletest
+	./bin/test
+
 clean:
 	$(RM) bin/*
