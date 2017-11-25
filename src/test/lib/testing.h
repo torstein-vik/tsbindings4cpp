@@ -8,4 +8,9 @@ void stoptest();
 int  testsfinished();
 void assert(bool assertion, std::string msg);
 
+template <class T>
+void assertequal(T p1, T p2){
+    assert(p1 == p2, p1 + " was not equal to " + p2);
+}
+
 #endif
