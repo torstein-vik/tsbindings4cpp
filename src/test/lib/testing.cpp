@@ -11,6 +11,8 @@ struct {
 
 void starttest(string name)
 {
+    TestState.testname = name;
+    TestState.passing = true;
 }
 
 void stoptest()
