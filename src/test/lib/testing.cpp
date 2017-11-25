@@ -4,6 +4,10 @@
 
 using namespace std;
 
+struct {
+    string testname;
+    bool passing;
+} TestState;
 
 void starttest(string name)
 {
