@@ -17,6 +17,11 @@ void starttest(string name)
 
 void stoptest()
 {
+    if(TestState.passing) {
+        cout << " - " << TestState.testname << ": succeeded!" << endl;
+    } else {
+        cout << " - " << TestState.testname << ": failed!" << endl;
+    }
 }
 
 int testsfinished()
