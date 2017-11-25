@@ -8,4 +8,11 @@ using namespace std;
 int main()
 {
     cout << endl << "Running tests..." << endl;
+
+    starttest("test1");
+
+    assertequal <int> (1 + 1, 2);
+
+    stoptest();
+    return testsfinished();
 }
