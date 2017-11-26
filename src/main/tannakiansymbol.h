@@ -8,10 +8,12 @@
 template <class T>
 class tannakiansymbol {
     private:
+        bool cleanedup;
         std::vector<std::pair<T, int> > data;
 
     public:
         tannakiansymbol (std::vector<std::pair<T, int> > multiplicities);
+        void cleanup ();
 };
 
 #endif
