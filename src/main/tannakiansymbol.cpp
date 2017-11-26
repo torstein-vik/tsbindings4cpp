@@ -9,3 +9,12 @@ tannakiansymbol<T>::tannakiansymbol (vector<pair<T, int> > multiplicities) :data
 
 }
 
+template <class T>
+void tannakiansymbol<T>::cleanup ()
+{
+    if (!cleanedup) {
+
+
+        cleanedup = true;
+    }
+}
