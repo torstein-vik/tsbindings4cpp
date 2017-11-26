@@ -10,7 +10,7 @@ void assert(bool assertion, std::string msg);
 
 template <class T>
 void assertequal(T p1, T p2){
-    assert(p1 == p2, p1 + " was not equal to " + p2);
+    assert(p1 == p2, std::to_string(p1) + " was not equal to " + std::to_string(p2));
 }
 
 #endif
