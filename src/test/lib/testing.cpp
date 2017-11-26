@@ -24,7 +24,7 @@ void stoptest()
         cout << " - " << TestState.testname << ": succeeded!" << endl;
     } else {
         cout << " - " << TestState.testname << ": failed!" << endl;
-        cout << "Error: " << TestState.error_msg << endl;
+        cout << TestState.error_msg;
     }
 }
 
@@ -38,6 +38,6 @@ void assert(bool assertion, string msg)
     if(!assertion) {
         TestState.passing = false;
         TestState.global_passing = false;
-        TestState.error_msg += "\n" + msg;
+        TestState.error_msg += "\t" + msg + "\n";
     }
 }
