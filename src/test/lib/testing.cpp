@@ -7,7 +7,7 @@ using namespace std;
 struct {
     string testname;
     bool passing;
-    bool global_passing;
+    bool global_passing = true;
     string error_msg;
 } TestState;
 
@@ -30,7 +30,7 @@ void stoptest()
 
 int testsfinished()
 {
-    return TestState.global_passing;
+    return !TestState.global_passing;
 }
 
 void assert(bool assertion, string msg)
