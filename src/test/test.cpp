@@ -14,20 +14,6 @@ int main()
     assertequal <int> (1 + 1, 2);
 
     stoptest();
-    starttest("test2");
-
-    assertequal <int> (1 + 1, 2);
-    assertequal <int> (1 + 1, 3);
-    assertequal <int> (1 + 1, 4);
-
-    stoptest();
-    starttest("test3");
-
-    assertequal <int> (1 + 1, 2);
-    assertequal <int> (1 + 1, 2);
-    assertequal <int> (1 + 1, 4);
-
-    stoptest();
 
     cout << endl;
     
